@@ -51,3 +51,6 @@ group :development, :test do
   gem 'poltergeist'
   gem 'factory_girl_rails'
 end
+
+gem 'erb2haml'
+gem 'haml-rails'
