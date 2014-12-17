@@ -42,3 +42,12 @@ gem 'spring',        group: :development
 # Rails Asset
 gem 'rails-assets-lodash'
 gem 'rails-assets-backbone'
+
+gem 'rails-assets-bootstrap-sass'
+
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'poltergeist'
+  gem 'factory_girl_rails'
+end
