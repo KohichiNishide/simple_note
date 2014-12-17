@@ -42,7 +42,7 @@ gem 'spring',        group: :development
 # Rails Asset
 gem 'rails-assets-lodash'
 gem 'rails-assets-backbone'
-
+gem 'rails-assets-underscore'
 gem 'rails-assets-bootstrap-sass'
 
 group :development, :test do
