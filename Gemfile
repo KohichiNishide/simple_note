@@ -50,7 +50,12 @@ group :development, :test do
   gem 'capybara'
   gem 'poltergeist'
   gem 'factory_girl_rails'
+  gem 'byebug'
 end
 
 gem 'erb2haml'
 gem 'haml-rails'
+
+gem 'pry-rails'
+gem 'awesome_print'
+
