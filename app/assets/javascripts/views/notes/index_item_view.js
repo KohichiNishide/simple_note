@@ -1,12 +1,12 @@
 var s, _base;
 
 if (window.SimpleNote == null) {
-  winsow.SimpleNote = {
+  window.SimpleNote = {
     Views: {}
   };
 }
 
-s = windows.SimpleNote;
+s = window.SimpleNote;
 
 if ((_base = s.Views).Notes == null) {
   _base.Notes = {};
