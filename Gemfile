@@ -55,6 +55,7 @@ end
 
 gem 'erb2haml'
 gem 'haml-rails'
+gem 'html2haml'
 
 gem 'pry-rails'
 gem 'awesome_print'

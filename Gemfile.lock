@@ -205,6 +205,7 @@ DEPENDENCIES
   erb2haml
   factory_girl_rails
   haml-rails
+  html2haml
   jbuilder (~> 2.0)
   jquery-rails
   poltergeist
