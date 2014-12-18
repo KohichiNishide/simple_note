@@ -24,7 +24,11 @@ s.Views.Notes.IndexItemView = Backbone.View.extend({
     'click a': 'navigateToNote'
   },
   render: function() {
-    this.$el.html(this.template(this.model.toJSON()));
+    var context = this.model.toJSON();
+    _.extend(context, {
+      previewText: this.model.previewText()
+    });
+    this.$el.html(this.template(context));
     return this;
   },
   navigateToNote: function(e) {
