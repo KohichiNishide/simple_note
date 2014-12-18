@@ -15,4 +15,5 @@
 //= require lodash
 //= require backbone
 //= require simple_note
+//= require handlebars.runtime
 //= require_tree .
