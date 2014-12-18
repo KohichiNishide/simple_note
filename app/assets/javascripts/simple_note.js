@@ -9,7 +9,7 @@ window.SimpleNote = {
     Backbone.history.start({
       pushState: true
     });
-    return console.log('init SimpleNote!')
+    return console.log('init SimpleNote!');
   }
 };
 
