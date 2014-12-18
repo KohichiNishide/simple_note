@@ -10,12 +10,13 @@ s = window.SimpleNote
 
 s.Routers.NoteRouter = Backbone.Router.extend({
   routes: {
-    "notes/:id": "show_note",
-    "notes": "index_notes",
-    "": "index_notes"
+    "notes/:id": "showNote",
+    "notes": "indexNotes",
+    "": "indexNotes"
   },
-  index_notes: function(){
+  indexNotes: function(){
     this.notes || (this.notes = new s.Collections.NoteCollection());
-    return this.notes.fetch();
+    this.currentView = new s.Views.Notes.IndexView(collection: this.notes);
+    return this.notes.fetch(reset: true);
   }
 });
