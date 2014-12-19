@@ -29,6 +29,11 @@ s.Routers.NoteRouter = Backbone.Router.extend({
       this.currentView.remove();
     }
     this.currentView = new s.Views.NewView(model: this.note);
+    this.listenTo(this.currentView, 'clickSubmit', (function(_this) {
+      return function() {
+        _this.note.save();
+      };
+    })(this));
     return this.currentView.render();      
   }
 });
