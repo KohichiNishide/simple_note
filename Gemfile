@@ -48,8 +48,6 @@ gem 'rails-assets-backbone.stickit'
 
 group :development, :test do
   gem 'rspec-rails'
-  gem 'capybara'
-  gem 'poltergeist'
   gem 'factory_girl_rails'
   gem 'byebug'
 end
@@ -64,3 +62,9 @@ gem 'awesome_print'
 gem 'handlebars_assets'
 gem 'redcarpet'
 gem 'tapp'
+
+group :test do
+  gem 'fuubar'
+  gem 'capybara'
+  gem 'poltergeist'
+end
