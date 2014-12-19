@@ -12,11 +12,12 @@ if ((_base = s.Views).Notes == null) {
   _base.Notes = {};
 }
 
-s.Views.Notes.NoteView = Backbone.View.extend({
+s.Views.Notes.NewView = Backbone.View.extend({
   className: 'new-note',
   template: JST['notes/note'],
   events: {
     'click .submit-note-form' : 'submit'
+    'click .back' : 'navigateToNoteIndex'
   },
   binding: {
     '#input-note-title' : 'title',
@@ -25,11 +26,20 @@ s.Views.Notes.NoteView = Backbone.View.extend({
   render: function() {
     this.$el.html(this.template(this.model.toJSON()));
     $('#main').html(this.el);
+    preview = new s.Views.Notes.PreviewView({
+      model: this.model,
+      el: this.$('.preview-col')
+    });
+    preview.render();
     this.stickit();
     return this;
   },
   submit: function(e) {
     e.preventDefault();
     return this.trigger('clickSubmit');
+  },
+  navigateToNoteIndex: function(e) {
+    e.preventDefault();
+    return Backbone.history.navigate('notes', true);
   }
 });

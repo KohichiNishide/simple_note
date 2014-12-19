@@ -1,5 +1,5 @@
 class NotesController < ApplicationController
-  before_action :set_note, only: [:show, :edit, :update, :destroy]
+  before_action :set_note, only: [:show, :edit, :update, :destroy, :body]
 
   # GET /notes
   # GET /notes.json
@@ -10,6 +10,12 @@ class NotesController < ApplicationController
   # GET /notes/1
   # GET /notes/1.json
   def show
+  end
+
+  def rendering
+    @note = Note.new do |n|
+      n.raw_body = ERB::Util.h(params[:raw_body])
+    end
   end
 
   # GET /notes/new
@@ -25,7 +31,6 @@ class NotesController < ApplicationController
   # POST /notes.json
   def create
     @note = Note.new(note_params)
-
     respond_to do |format|
       if @note.save
         format.html { redirect_to @note, notice: 'Note was successfully created.' }
@@ -60,6 +65,7 @@ class NotesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
