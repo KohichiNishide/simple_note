@@ -1,11 +1,5 @@
 var s, _base;
 
-if (window.SimpleNote == null){
-  window.SimpleNote = {
-    Views: {}
-  };
-}
-
 s = window.SimpleNote;
 
 if ((_base = s.Views).Notes == null) {

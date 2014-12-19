@@ -1,11 +1,5 @@
 var s;
 
-if (window.SimpleNote == null) {
-  window.SimpleNote = {
-    Views: {}
-  };
-}
-
 s = window.SimpleNote.Views;
 
 s.Views.Notes.NewButtonView = Backbone.View.extend({
