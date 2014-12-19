@@ -8,6 +8,7 @@ gem 'rails', '4.1.1'
 gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
+gem 'zurui-sass-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
@@ -26,6 +27,8 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
+gem "spring-commands-rspec", group: :development
+gem "spring-commands-cucumber", group: :development
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -50,6 +53,15 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'byebug'
+  gem 'pry-byebug'
+  gem "pry-stack_explorer"
+end
+
+group :development do
+  gem 'coffee-rails-source-maps'
+  gem 'xray-rails'
+  gem "better_errors"
+  gem "binding_of_caller"
 end
 
 gem 'erb2haml'
@@ -58,7 +70,6 @@ gem 'html2haml'
 
 gem 'pry-rails'
 gem 'awesome_print'
-
 gem 'handlebars_assets'
 gem 'redcarpet'
 gem 'tapp'
