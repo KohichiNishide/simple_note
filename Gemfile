@@ -45,11 +45,15 @@ gem "spring-commands-cucumber", group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'handlebars_assets'
+gem 'redcarpet'
+gem 'bootstrap-sass'
+
+
 # Rails Asset
 gem 'rails-assets-lodash'
 gem 'rails-assets-backbone'
 gem 'rails-assets-underscore'
-gem 'rails-assets-bootstrap-sassa'
 gem 'rails-assets-backbone.stickit'
 gem 'rails-assets-chai'
 gem 'rails-assets-chai-jquery'
