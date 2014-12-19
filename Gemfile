@@ -9,6 +9,7 @@ gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 gem 'zurui-sass-rails'
+gem 'compass-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
@@ -46,8 +47,11 @@ gem "spring-commands-cucumber", group: :development
 gem 'rails-assets-lodash'
 gem 'rails-assets-backbone'
 gem 'rails-assets-underscore'
-gem 'rails-assets-bootstrap-sass'
-gem 'rails-assets-backbone.stickit'
+gem 'rails-assets-bootstrap-sassa
+aem 'rails-assets-backbone.stickit'
+gem 'rails-assets-chai'
+gem 'rails-assets-chai-jquery'
+gem 'rails-assets-sinonjs'
 
 group :development, :test do
   gem 'rspec-rails'
@@ -59,9 +63,9 @@ end
 
 group :development do
   gem 'coffee-rails-source-maps'
-  gem 'xray-rails'
   gem "better_errors"
   gem "binding_of_caller"
+  gem "teaspoon"
 end
 
 gem 'erb2haml'

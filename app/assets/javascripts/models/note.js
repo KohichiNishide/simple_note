@@ -26,7 +26,7 @@ s.Models.Note = Backbone.Model.extend({
         }
       }).done((function(_this) {
         return function(data) {
-          _this.set('body', data);
+          _this.set('body', data.body);
           return _this.trigger('renderBody', data);
         };
       })(this));

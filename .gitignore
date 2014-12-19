@@ -38,3 +38,5 @@ bower.json
 
 .DS_Store
 erd.*
+
+public/assets/source_maps
