@@ -62,4 +62,5 @@ gem 'pry-rails'
 gem 'awesome_print'
 
 gem 'handlebars_assets'
+gem 'redcarpet'
 

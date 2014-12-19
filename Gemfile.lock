@@ -141,6 +141,7 @@ GEM
     rake (10.4.2)
     rdoc (4.2.0)
       json (~> 1.4)
+    redcarpet (3.2.2)
     rspec-core (3.1.7)
       rspec-support (~> 3.1.0)
     rspec-expectations (3.1.2)
@@ -223,6 +224,7 @@ DEPENDENCIES
   rails-assets-bootstrap-sass
   rails-assets-lodash
   rails-assets-underscore
+  redcarpet
   rspec-rails
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
