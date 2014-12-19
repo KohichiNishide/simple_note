@@ -47,8 +47,8 @@ gem "spring-commands-cucumber", group: :development
 gem 'rails-assets-lodash'
 gem 'rails-assets-backbone'
 gem 'rails-assets-underscore'
-gem 'rails-assets-bootstrap-sassa
-aem 'rails-assets-backbone.stickit'
+gem 'rails-assets-bootstrap-sassa'
+gem 'rails-assets-backbone.stickit'
 gem 'rails-assets-chai'
 gem 'rails-assets-chai-jquery'
 gem 'rails-assets-sinonjs'
@@ -59,13 +59,14 @@ group :development, :test do
   gem 'byebug'
   gem 'pry-byebug'
   gem "pry-stack_explorer"
+  gem "teaspoon"
 end
 
 group :development do
   gem 'coffee-rails-source-maps'
   gem "better_errors"
   gem "binding_of_caller"
-  gem "teaspoon"
+  gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git'
 end
 
 gem 'erb2haml'
