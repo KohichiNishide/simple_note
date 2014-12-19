@@ -29,7 +29,6 @@ s.Views.Notes.PreviewView = Backbone.View.extend({
   },
   render: function() {
     this.$el.html(this.template(this.model.toJSON()));
-    this.$('#note-body').html(this.template(this.model.toJSON()));
     this.model.trigger('change:raw_body');
     return this.stickit();
   }

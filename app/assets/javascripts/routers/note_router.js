@@ -16,19 +16,18 @@ s.Routers.NoteRouter = Backbone.Router.extend({
     ".*": "indexNotes"
   },
   initialize: function(options) {
+    this.layout = new s.Views.LayoutView({
+      el: $("body")
+    });
     return this.notes = new s.Collections.NoteCollection();
   },
   indexNotes: function(){
-    if (this.currentView == null ) {
-      this.currentView.remove();
-    }
-    this.currentView = new s.Views.Notes.IndexView(collection: this.notes);
+    var indexView;
+    indexView = new s.Views.Notes.IndexView(collection: this.notes);
+    this.layout.setView(indexView);
     return this.notes.fetch(reset: true);
   },
   newNote: function(){
-    if (this.currentView == null ) {
-      this.currentView.remove();
-    }
     this.note = new s.Models.Note();
     this.__renderNoteView();
     return this.listenTo(this.note, 'sync', (function(_this) {
@@ -38,9 +37,6 @@ s.Routers.NoteRouter = Backbone.Router.extend({
     })(this));
   },
   showNote: function(id) {
-    if (this.currentView) {
-      this.currentView.remove();
-    }
     this.note = this.notes.get(id);
     if (this.note) {
       return this.__renderNoteView();
@@ -58,9 +54,11 @@ s.Routers.NoteRouter = Backbone.Router.extend({
     }
   },
   __renderNoteView: function() {
-    this.currentView = new s.Views.Notes.NoteView({
+    var noteView;
+    noteView = new s.Views.Notes.NoteView({
       model: this.note
     });
+    this.layout.setView(noteView);
     return this.listenTo(this.currentView, 'clickSubmit', (function(_this) {
       return function() {
         return _this.note.save();

@@ -25,7 +25,6 @@ s.Views.Notes.NewView = Backbone.View.extend({
   },
   render: function() {
     this.$el.html(this.template(this.model.toJSON()));
-    $('#main').html(this.el);
     preview = new s.Views.Notes.PreviewView({
       model: this.model,
       el: this.$('.preview-col')
