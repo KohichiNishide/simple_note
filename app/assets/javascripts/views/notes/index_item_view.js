@@ -24,6 +24,13 @@ s.Views.Notes.IndexItemView = Backbone.View.extend({
     'click .note-title' : 'navigateToNote',
     'click .delete-note' : 'deleteNote'
   },
+  initialize: function() {
+    return this.listenTo(this.model, 'destroy', (function(_this) {
+      return function() {
+        return _this.remove();
+      };
+    })(this));
+  },
   render: function() {
     var context = this.model.toJSON();
     _.extend(context, {
@@ -39,11 +46,7 @@ s.Views.Notes.IndexItemView = Backbone.View.extend({
   deleteNote: function(e) {
     e.preventDefault();
     if (confirm('ノートを削除しますか？')) {
-      return this.model.destroy().done((function(_this) {
-        return function() {
-          return _this.remove();
-        };
-      })(this));
+      return this.model.destroy();
     }
   }
 });
