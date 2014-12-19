@@ -1,5 +1,5 @@
 'use strict';
-window.SimpleNote = {
+this.SimpleNote = {
   Models: {},
   Conllections: {},
   Views: {},

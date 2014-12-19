@@ -1,9 +1,9 @@
 var s;
 
-if (window.SimpleNote == null){
-  window.SimpleNote = {
-    Routers: {}
-  };
+s = this.SimpleNote;
+
+if (s.Routers == null) {
+  s.Routers = {};
 }
 
 s = window.SimpleNote;

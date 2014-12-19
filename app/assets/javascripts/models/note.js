@@ -1,12 +1,10 @@
 var s;
 
-if (window.SimpleNote == null) {
-  window.SimpleNote = {
-    Models: {}
-  };
-}
+s = this.SimpleNote;
 
-s = window.SimpleNote;
+if (s.Models == null) {
+  s.Models = {};
+}
 
 s.Models.Note = Backbone.Model.extend({
     url: '/notes',

@@ -1,6 +1,6 @@
 var s, _base;
 
-s = window.SimpleNote;
+s = this.SimpleNote;
 
 if ((_base = s.Views).Notes == null) {
   _base.Notes = {};
