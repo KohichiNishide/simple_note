@@ -21,7 +21,8 @@ s.Views.Notes.IndexItemView = Backbone.View.extend({
     });
   },
   events: {
-    'click a': 'navigateToNote'
+    'click .note-title' : 'navigateToNote',
+    'click .delete-note' : 'deleteNote'
   },
   render: function() {
     var context = this.model.toJSON();
@@ -34,5 +35,15 @@ s.Views.Notes.IndexItemView = Backbone.View.extend({
   navigateToNote: function(e) {
     e.preventDefault();
     return Backbone.history.navigate("notes/" + this.model.id, true);
+  },
+  deleteNote: function(e) {
+    e.preventDefault();
+    if (confirm('ノートを削除しますか？')) {
+      return this.model.destroy().done((function(_this) {
+        return function() {
+          return _this.remove();
+        };
+      })(this));
+    }
   }
 });
