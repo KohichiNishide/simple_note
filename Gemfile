@@ -44,6 +44,7 @@ gem 'rails-assets-lodash'
 gem 'rails-assets-backbone'
 gem 'rails-assets-underscore'
 gem 'rails-assets-bootstrap-sass'
+gem 'rails-assets-backbone.stickit'
 
 group :development, :test do
   gem 'rspec-rails'
