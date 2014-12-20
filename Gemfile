@@ -60,13 +60,13 @@ gem 'rails-assets-highlightjs'
 gem 'rails-assets-chai'
 gem 'rails-assets-chai-jquery'
 gem 'rails-assets-sinonjs'
+gem 'pry-rails'
 
 group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'byebug'
   gem "pry-stack_explorer"
-  gem 'pry-rails'
   gem 'pry-doc'
   gem 'pry-byebug'
   gem "teaspoon"
