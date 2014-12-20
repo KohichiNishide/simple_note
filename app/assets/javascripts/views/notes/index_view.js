@@ -30,7 +30,7 @@ s.Views.Notes.IndexView = Backbone.View.extend({
         });
         return _this.$(".notes").append(view.render().el);
       };
-    })(this));
+    })(this);
     this.$("#note-menu");
     return this;
   },

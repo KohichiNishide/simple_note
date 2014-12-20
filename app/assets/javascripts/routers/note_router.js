@@ -17,9 +17,13 @@ s.Routers.NoteRouter = Backbone.Router.extend({
   },
   indexNotes: function(){
     var indexView;
-    indexView = new s.Views.Notes.IndexView(collection: this.notes);
+    indexView = new s.Views.Notes.IndexView({
+      collection: this.notes
+    });
     this.layout.setView(indexView);
-    return this.notes.fetch(reset: true);
+    return this.notes.fetch({
+      reset: true
+    });
   },
   newNote: function(){
     this.note = new s.Models.Note();

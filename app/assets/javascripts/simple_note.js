@@ -1,7 +1,7 @@
 'use strict';
 this.SimpleNote = {
   Models: {},
-  Conllections: {},
+  Collections: {},
   Views: {},
   Routers: {},
   init: function(){
@@ -14,5 +14,5 @@ this.SimpleNote = {
 };
 
 document.addEventListener('DOMContentLoaded', function() {
-  SimpleNote.init();
+  //SimpleNote.init();
 });

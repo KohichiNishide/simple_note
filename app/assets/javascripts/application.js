@@ -14,9 +14,9 @@
 //= require jquery_ujs
 //= require lodash
 //= require backbone
-//= require simple_note
 //= require notifyjs/notify-combined
 //= require backbone.stickit/backbone.stickit
 //= require highlightjs
 //= require handlebars.runtime
+//= require simple_note
 //= require_tree .

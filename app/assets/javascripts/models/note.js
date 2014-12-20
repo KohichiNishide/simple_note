@@ -37,7 +37,7 @@ s.Models.Note = Backbone.Model.extend({
     }
 });
 
-s.Collections.NoteCollection = Backbone.Collections.extend({
+s.Collections.NoteCollection = Backbone.Collection.extend({
   model: s.Models.Note,
   url: '/notes'
 });
