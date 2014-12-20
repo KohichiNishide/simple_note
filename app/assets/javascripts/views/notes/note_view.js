@@ -18,6 +18,9 @@ s.Views.Notes.NoteView = Backbone.View.extend({
     '#input-note-raw_body' : 'raw_body'
   },
   render: function() {
+    var preview;
+    this.listenTo(this.model, 'sync', _.bind(this._onModelSynced, this));
+    this.listenTo(this.model, 'error', _.bind(this._onModelErrored, this));
     this.$el.html(this.template(this.model.toJSON()));
     preview = new s.Views.Notes.PreviewView({
       model: this.model,
@@ -34,5 +37,17 @@ s.Views.Notes.NoteView = Backbone.View.extend({
   navigateToNoteIndex: function(e) {
     e.preventDefault();
     return Backbone.history.navigate('notes', true);
+  },
+  _onModelSynced: function() {
+    return this.$('.submit-note-form').notify("Success!", {
+      className: 'success',
+      position: "right"
+    });
+  },
+  _onModelErrored: function() {
+    return this.$('.submit-note-form').notify("Error!", {
+      className: 'error',
+      position: "right"
+    });
   }
 });

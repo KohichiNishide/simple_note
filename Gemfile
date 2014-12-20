@@ -9,6 +9,7 @@ gem 'sqlite3', group: [:development, :test]
 gem 'pg'
 gem 'rails_12factor', group: :production # for heroku
 # Use SCSS for stylesheets
+gem 'sass', '3.2.19'
 gem 'sass-rails', '~> 4.0.3'
 gem 'zurui-sass-rails'
 gem 'compass-rails'
