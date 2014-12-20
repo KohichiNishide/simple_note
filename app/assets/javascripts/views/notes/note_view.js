@@ -6,7 +6,7 @@ if ((_base = s.Views).Notes == null) {
   _base.Notes = {};
 }
 
-s.Views.Notes.NewView = Backbone.View.extend({
+s.Views.Notes.NoteView = Backbone.View.extend({
   className: 'new-note',
   template: JST['notes/note'],
   events: {

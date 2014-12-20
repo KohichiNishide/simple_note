@@ -22,7 +22,8 @@ s.Views.Notes.IndexView = Backbone.View.extend({
     })(this));
   },
   render: function() {
-    this.collection.each(function(_this) {
+    this.$el.html(this.template());
+    this.collection.each((function(_this) {
       return function(note) {
         var view;
         view = new s.Views.Notes.IndexItemView({
@@ -30,7 +31,7 @@ s.Views.Notes.IndexView = Backbone.View.extend({
         });
         return _this.$(".notes").append(view.render().el);
       };
-    })(this);
+    })(this));
     this.$("#note-menu");
     return this;
   },

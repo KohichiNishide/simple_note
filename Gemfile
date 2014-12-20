@@ -65,8 +65,10 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'byebug'
-  gem 'pry-byebug'
   gem "pry-stack_explorer"
+  gem 'pry-rails'
+  gem 'pry-doc'
+  gem 'pry-byebug'
   gem "teaspoon"
 end
 
@@ -81,11 +83,7 @@ end
 gem 'erb2haml'
 gem 'haml-rails'
 gem 'html2haml'
-
-gem 'pry-rails'
 gem 'awesome_print'
-gem 'handlebars_assets'
-gem 'redcarpet'
 gem 'tapp'
 
 group :test do

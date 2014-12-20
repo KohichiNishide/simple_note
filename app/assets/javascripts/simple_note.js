@@ -14,5 +14,5 @@ this.SimpleNote = {
 };
 
 document.addEventListener('DOMContentLoaded', function() {
-  //SimpleNote.init();
+  SimpleNote.init();
 });
