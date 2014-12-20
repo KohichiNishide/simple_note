@@ -10,7 +10,7 @@ s.Views.Notes.NewView = Backbone.View.extend({
   className: 'new-note',
   template: JST['notes/note'],
   events: {
-    'click .submit-note-form' : 'submit'
+    'click .submit-note-form' : 'submit',
     'click .back' : 'navigateToNoteIndex'
   },
   binding: {

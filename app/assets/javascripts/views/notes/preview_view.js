@@ -1,7 +1,7 @@
 var s, _base;
 
-if (ndow.SimpleNote == null) {
-  ndow.SimpleNote = {
+if (this.SimpleNote == null) {
+  this.SimpleNote = {
     Views: {}
   };
 }
@@ -16,7 +16,6 @@ s.Views.Notes.PreviewView = Backbone.View.extend({
   template: JST['notes/preview'],
   bindings: {
     '#note-title': 'title'
-    }
   },
   initialize: function() {
     return this.listenTo(this.model, 'change:body', _.bind(this._updatePreview, this));
@@ -31,5 +30,4 @@ s.Views.Notes.PreviewView = Backbone.View.extend({
     return this.$("code").each(function(i, e) {
       return hljs.highlightBlock(e);
     });
-  }
-});
+  }});

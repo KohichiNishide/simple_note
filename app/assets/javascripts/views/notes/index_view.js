@@ -10,8 +10,9 @@ s.Views.Notes.IndexView = Backbone.View.extend({
   tagName: 'ul',
   id: 'notes',
   template: JST['notes/index'],
-  events: 
+  events: {
     'click a.new-note-btn' : 'navigateToNewNote'
+  },
   initialize: function(options) {
     this.options = options;
     return this.listenTo(this.collection, "reset", (function(_this) {

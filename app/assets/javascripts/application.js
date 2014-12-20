@@ -15,6 +15,7 @@
 //= require lodash
 //= require backbone
 //= require simple_note
+//= require notifyjs/notify-combined
 //= require backbone.stickit/backbone.stickit
 //= require highlightjs
 //= require handlebars.runtime

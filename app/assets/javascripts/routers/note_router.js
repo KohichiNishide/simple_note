@@ -2,12 +2,6 @@ var s;
 
 s = this.SimpleNote;
 
-if (s.Routers == null) {
-  s.Routers = {};
-}
-
-s = window.SimpleNote;
-
 s.Routers.NoteRouter = Backbone.Router.extend({
   routes: {
     "notes/new": "newNote", 
