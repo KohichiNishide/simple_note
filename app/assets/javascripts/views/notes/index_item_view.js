@@ -9,11 +9,10 @@ if ((_base = s.Views).Notes == null) {
 s.Views.Notes.IndexItemView = Backbone.View.extend({
   tagName: 'li',
   id: function() {
-    return ("note-" + this.model.id)({
-      className: 'note',
-      template: JST['notes/index_item']
-    });
+    return "note-" + this.model.id;
   },
+  className: 'note',
+  template: JST['notes/index_item'],
   events: {
     'click .note-title' : 'navigateToNote',
     'click .delete-note' : 'deleteNote'

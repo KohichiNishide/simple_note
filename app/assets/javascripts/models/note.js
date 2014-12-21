@@ -7,7 +7,7 @@ if (s.Models == null) {
 }
 
 s.Models.Note = Backbone.Model.extend({
-    url: '/notes',
+    urlRoot: '/notes',
     initialize: function() {
       return this.listenTo(this, 'change:raw_body', _.debounce((function(_this) {
         return function() {

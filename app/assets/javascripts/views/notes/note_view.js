@@ -13,7 +13,7 @@ s.Views.Notes.NoteView = Backbone.View.extend({
     'click .submit-note-form' : 'submit',
     'click .back' : 'navigateToNoteIndex'
   },
-  binding: {
+  bindings: {
     '#input-note-title' : 'title',
     '#input-note-raw_body' : 'raw_body'
   },

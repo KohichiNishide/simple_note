@@ -60,6 +60,8 @@ s.Routers.NoteRouter = Backbone.Router.extend({
     this.layout.setView(noteView);
     return this.listenTo(this.layout.currentView, 'clickSubmit', (function(_this) {
       return function() {
+        console.log(_this.note.get('title'));
+        console.log(_this.note.get('raw_body'));
         return _this.note.save();
       };
     })(this));
